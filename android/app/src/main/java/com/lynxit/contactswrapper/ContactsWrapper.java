@@ -172,7 +172,7 @@ public class ContactsWrapper extends ReactContextBaseJavaModule implements Activ
                             while (phones.moveToNext())
                             {
                                 WritableMap phoneObj = Arguments.createMap();
-                                String number = phones.getString(phones.getColumnIndex(ContactsContract.RawContacts.ACCOUNT_TYPE));
+                                String number = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
                                 int type = phones.getInt(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.TYPE));
                                 String phoneType = "";
                                 switch (type) {
